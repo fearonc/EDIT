@@ -94,9 +94,69 @@ header a:hover {
   transition: 0.3s;
 }
 
-.cta-button:hover {
+/*.cta-button:hover {
   background: #81c1dd;
 }
+*/
+
+/* Learn more button formatting */
+.cta-button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  background: #c1e5f5;  /* normal state */
+  color: black;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;  /* needed for glow */
+  overflow: hidden;    /* prevent gradient overflow */
+}
+
+/* Hover effect – rainbow background + glow */
+.cta-button:hover {
+  background: linear-gradient(
+    90deg,
+    red,
+    orange,
+    yellow,
+    green,
+    cyan,
+    blue,
+    violet,
+    red
+  );
+  background-size: 400% 100%;
+  color: white; /* text color on hover */
+  animation: rainbow 3s linear infinite, buttonPulse 2s ease-in-out infinite;
+  box-shadow: 0 0 8px rgba(255,255,255,0.6),
+              0 0 20px rgba(255,255,255,0.4); /* subtle glow */
+}
+
+/* Reuse the rainbow scroll keyframes */
+@keyframes rainbow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* Button pulse glow animation */
+@keyframes buttonPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 8px rgba(255,255,255,0.6),
+                0 0 20px rgba(255,255,255,0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 14px rgba(255,255,255,0.8),
+                0 0 28px rgba(255,255,255,0.6);
+  }
+}
+
+
+
+
 
 /* Sections */
 section {
@@ -119,18 +179,8 @@ h2 {
   color: #111;
 }
 
-/*
-.service-list {
-  list-style: none;
-  padding-left: 0;
-}
 
-.service-list li {
-  margin: 0.5rem 0;
-}
-*/
-
-
+/*Services formatting*/
 .service-list {
   list-style: none;
   padding-left: 0;
