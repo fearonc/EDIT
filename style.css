@@ -66,7 +66,7 @@ header a:hover {
   flex-direction: column;
    justify-content: flex-start; /* instead of center */
   align-items: center;
-  padding: 4rem 2rem;          /* extra top padding pushes it down a bit */
+  padding: 2rem 2rem;          /* extra top padding pushes it down a bit */
 }
 
 #hero h2 {
@@ -76,6 +76,7 @@ header a:hover {
 
 #hero p {
   font-size: 1.25rem; /* slightly larger body text */
+  font-colour: #000000
   max-width: 700px;
 }
 
