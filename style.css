@@ -137,11 +137,10 @@ h2 {
 }
 
 .service-list li {
-  font-size: 1.2rem;   /* optional: make services a bit bigger */
-  margin: 0.75rem 0;   /* slightly more space */
+  font-size: 1.2rem;
+  margin: 0.75rem 0;
   position: relative;
   cursor: pointer;
-  display: inline-block; /* ensures bullet + text are treated together */
 }
 
 /* Custom diamond bullet */
@@ -149,13 +148,11 @@ h2 {
   content: "✦";
   margin-right: 0.5rem;
   display: inline-block;
-  background: currentColor; /* same as text color */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: background 0.5s ease;
+  color: currentColor; /* normal state: same as text */
+  transition: color 0.3s ease;
 }
 
-/* Hover effect for bullet */
+/* Hover effect – rainbow fills the character itself */
 .service-list li:hover::before {
   background: linear-gradient(
     90deg,
@@ -170,12 +167,18 @@ h2 {
   );
   background-size: 400% 100%;
   animation: rainbow 3s linear infinite;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for Firefox */
+  color: transparent;    /* ensure text takes gradient */
 }
 
 @keyframes rainbow {
   0% { background-position: 0% 50%; }
   100% { background-position: 100% 50%; }
 }
+
 
 
 
