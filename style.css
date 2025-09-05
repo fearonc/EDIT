@@ -52,6 +52,8 @@ header a:hover {
  */
 
 #hero {
+  max-width: 100%;
+  margin: 0;
   background-image: url("assets/EDIT_Team.jpg");
   background-size: cover;       /* Scale the image to cover the whole area */
   background-position: center;  /* Keep it centered */
