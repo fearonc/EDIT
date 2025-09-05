@@ -144,7 +144,7 @@ h2 {
   padding-left: 2rem; /* space for the ✦ */
 }
 
-/* Insert the ✦ before each item */
+/* Rainbow ✦ */
 .service-list li::before {
   content: "✦";
   position: absolute;
@@ -155,7 +155,6 @@ h2 {
   transition: all 0.3s ease;
 }
 
-/* Rainbow gradient on hover */
 .service-list li:hover::before {
   background: linear-gradient(
     90deg,
@@ -169,14 +168,29 @@ h2 {
     red
   );
   background-size: 400% 100%;
-  animation: rainbow 3s linear infinite, pulse 2s ease-in-out infinite;
+  animation: rainbow 3s linear infinite;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  color: transparent; /* needed for gradient text */
+  color: transparent;
+  z-index: 1;
 }
 
-/* Rainbow animation */
+/* Glow behind the ✦ */
+.service-list li:hover::after {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.2rem;
+  color: transparent; /* only the glow shows */
+  animation: pulse 2s ease-in-out infinite;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Rainbow scroll animation */
 @keyframes rainbow {
   0% { background-position: 0% 50%; }
   100% { background-position: 100% 50%; }
