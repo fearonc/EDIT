@@ -132,7 +132,7 @@ h2 {
 
 
 .service-list {
-  list-style: none;   /* remove default bullets */
+  list-style: none;
   padding-left: 0;
 }
 
@@ -143,16 +143,16 @@ h2 {
   cursor: pointer;
 }
 
-/* Custom diamond bullet */
+/* Rainbow ✦ */
 .service-list li::before {
   content: "✦";
   margin-right: 0.5rem;
   display: inline-block;
-  color: currentColor; /* normal state: same as text */
+  color: currentColor; /* default state */
   transition: color 0.3s ease;
 }
 
-/* Hover effect – rainbow fills the character itself */
+/* On hover: rainbow fills ✦ */
 .service-list li:hover::before {
   background: linear-gradient(
     90deg,
@@ -166,22 +166,35 @@ h2 {
     red
   );
   background-size: 400% 100%;
-  animation: rainbow 3s linear infinite, pulse 2s ease-in-out infinite;
-
+  animation: rainbow 3s linear infinite;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text; /* Firefox */
-  color: transparent;    /* ensure text takes gradient */
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6); /* soft glow */
+  background-clip: text;
+  color: transparent;
+  position: relative;
+  z-index: 1; /* sits above glow */
 }
 
-/* Rainbow animation for scrolling colours */
+/* Glow layer */
+.service-list li:hover::after {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  margin-right: 0.5rem;
+  color: transparent;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+  animation: pulse 2s ease-in-out infinite;
+  pointer-events: none; /* doesn't block hover */
+  z-index: 0;
+}
+
+/* Rainbow animation */
 @keyframes rainbow {
   0% { background-position: 0% 50%; }
   100% { background-position: 100% 50%; }
 }
 
-/* Pulse animation for glow effect */
+/* Pulse glow animation */
 @keyframes pulse {
   0%, 100% {
     text-shadow: 0 0 6px rgba(255, 255, 255, 0.5),
@@ -191,7 +204,7 @@ h2 {
   50% {
     text-shadow: 0 0 12px rgba(255, 255, 255, 0.8),
                  0 0 24px rgba(255, 255, 255, 0.6);
-    transform: scale(1.15); /* subtle grow */
+    transform: scale(1.2);
   }
 }
 
