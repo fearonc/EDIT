@@ -40,17 +40,6 @@ header a:hover {
   text-decoration: underline;
 }
 
-/* Hero section
-#hero {
-  background: url("assets/EDIT_Team.jpg") center/cover no-repeat;
-  width: 100%;
-  height: auto;
-  color: white;
-  text-align: center;
-  padding: 6rem 2rem;
-}
- */
-
 #hero {
   max-width: 100%;
   margin: 0;
@@ -98,8 +87,8 @@ header a:hover {
 
 /* Sections */
 section {
-  padding: 4rem 2rem;
-  max-width: 900px;
+  padding: 3rem 2rem;
+  max-width: 100%;
   margin: auto;
 }
 
