@@ -82,77 +82,87 @@ header a:hover {
   padding: 1rem 2rem;          /* extra top padding pushes it down a bit */
 }
 
+/*Learn More Button Formatting*/
 .cta-button {
   margin-top: 1rem;
   padding: 0.75rem 1.5rem;
   border: none;
-  background: #c1e5f5;
+  background: #c1e5f5; /* normal state */
   color: black;
   font-size: 1rem;
   border-radius: 6px;
   cursor: pointer;
-  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  transition: color 0.3s ease;
 }
 
-/*.cta-button:hover {
-  background: #81c1dd;
-}
-*/
-
-/* Learn more button formatting */
-.cta-button {
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  background: #c1e5f5;  /* normal state */
-  color: black;
-  font-size: 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;  /* needed for glow */
-  overflow: hidden;    /* prevent gradient overflow */
-}
-
-/* Hover effect – rainbow background + glow */
-.cta-button:hover {
-  background: linear-gradient(
-    90deg,
-    red,
-    orange,
-    yellow,
-    green,
-    cyan,
-    blue,
-    violet,
-    red
+/* Pseudo-element for slightly more saturated rotating rainbow halo */
+.cta-button::before {
+  content: "";
+  position: absolute;
+  top: -150%;
+  left: -150%;
+  width: 400%;
+  height: 400%;
+  background: conic-gradient(
+    #ff5a7a 0%,   /* more vibrant pink */
+    #ff8ab0 15%,  /* slightly stronger pink */
+    #e67ef5 30%,  /* brighter lavender */
+    #4d90ff 45%,  /* more vivid blue */
+    #5fdfff 60%,  /* brighter cyan */
+    #4fff6f 75%,  /* stronger green */
+    #5fdfa0 90%,  /* mint green */
+    #ff5a7a 100%  /* loop back to pink */
   );
-  background-size: 400% 100%;
-  color: white; /* text color on hover */
-  animation: rainbow 3s linear infinite, buttonPulse 2s ease-in-out infinite;
-  box-shadow: 0 0 8px rgba(255,255,255,0.6),
-              0 0 20px rgba(255,255,255,0.4); /* subtle glow */
+  border-radius: 50%;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  filter: blur(40px); /* soft glow */
 }
 
-/* Reuse the rainbow scroll keyframes */
-@keyframes rainbow {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
+/* Hover: show and rotate gradient */
+.cta-button:hover::before {
+  opacity: 1;
+  animation: rotateGradient 8s linear infinite;
 }
 
-/* Button pulse glow animation */
+/* Button hover: text color + pulse glow */
+.cta-button:hover {
+  color: white;
+  box-shadow:
+    0 0 20px rgba(255,255,255,0.5),
+    0 0 40px rgba(255,255,255,0.3),
+    0 0 60px rgba(255,255,255,0.2);
+  animation: buttonPulse 2s ease-in-out infinite;
+}
+
+/* Rotate the gradient */
+@keyframes rotateGradient {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Button pulse glow */
 @keyframes buttonPulse {
   0%, 100% {
     transform: scale(1);
-    box-shadow: 0 0 8px rgba(255,255,255,0.6),
-                0 0 20px rgba(255,255,255,0.4);
+    box-shadow:
+      0 0 20px rgba(255,255,255,0.5),
+      0 0 40px rgba(255,255,255,0.3),
+      0 0 60px rgba(255,255,255,0.2);
   }
   50% {
     transform: scale(1.05);
-    box-shadow: 0 0 14px rgba(255,255,255,0.8),
-                0 0 28px rgba(255,255,255,0.6);
+    box-shadow:
+      0 0 28px rgba(255,255,255,0.7),
+      0 0 56px rgba(255,255,255,0.4),
+      0 0 84px rgba(255,255,255,0.3);
   }
 }
+
 
 
 
