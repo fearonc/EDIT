@@ -79,6 +79,7 @@ header a:hover {
 .edit-logo{
   height: auto;
   width: 500px;
+  padding: 1rem 2rem;          /* extra top padding pushes it down a bit */
 }
 
 .cta-button {
