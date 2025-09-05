@@ -36,7 +36,6 @@ header img {
   width: auto;
 }
 
-
 header a {
   color: #fff;
   text-decoration: none;
@@ -46,48 +45,49 @@ header a:hover {
   text-decoration: underline;
 }
 
+/* Hero section */
 #hero {
   max-width: 100%;
   margin: 0;
   background-image: url("assets/EDIT_Team.jpg");
-  background-size: cover;       /* Scale the image to cover the whole area */
-  background-position: center;  /* Keep it centered */
-  background-repeat: no-repeat; /* Prevent tiling */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   width: 100%;
-  height: 100vh;                /* Make it full screen height */
+  height: 100vh;
   color: white;
   text-align: center;
-  display: flex;                /* Center content inside */
+  display: flex;
   flex-direction: column;
-   justify-content: flex-start; /* instead of center */
+  justify-content: flex-start;
   align-items: center;
-  padding: 1rem 2rem;          /* extra top padding pushes it down a bit */
+  padding: 1rem 2rem;
 }
 
 #hero h2 {
-  font-size: 3rem;  /* make heading big */
+  font-size: 3rem;
   margin-bottom: 1rem;
 }
 
 #hero p {
-  font-size: 1.25rem; /* slightly larger body text */
+  font-size: 1.25rem;
   color: black;
   max-width: 700px;
 }
 
-
-.edit-logo{
+/* Logo styling */
+.edit-logo {
   height: auto;
   width: 500px;
-  padding: 1rem 2rem;          /* extra top padding pushes it down a bit */
+  padding: 1rem 2rem;
 }
 
-/*Learn More Button Formatting*/
+/* Learn More Button Formatting */
 .cta-button {
   margin-top: 1rem;
   padding: 0.75rem 1.5rem;
   border: none;
-  background: #c1e5f5; /* normal state */
+  background: #c1e5f5;
   color: black;
   font-size: 1rem;
   border-radius: 6px;
@@ -107,28 +107,19 @@ header a:hover {
   width: 400%;
   height: 400%;
   background: conic-gradient(
-    #ff5a7a 0%,   /* more vibrant pink */
-    #ff8ab0 15%,  /* slightly stronger pink */
-    #e67ef5 30%,  /* brighter lavender */
-    #4d90ff 45%,  /* more vivid blue */
-    #5fdfff 60%,  /* brighter cyan */
-    #4fff6f 75%,  /* stronger green */
-    #5fdfa0 90%,  /* mint green */
-    #ff5a7a 100%  /* loop back to pink */
+    #ff5a7a 0%, #ff8ab0 15%, #e67ef5 30%, #4d90ff 45%, #5fdfff 60%, #4fff6f 75%, #5fdfa0 90%, #ff5a7a 100%
   );
   z-index: -1;
   transition: opacity 0.5s ease;
   opacity: 0;
-  filter: blur(30px); /* soft glow */
+  filter: blur(30px);
 }
 
-/* Hover: show and rotate gradient */
 .cta-button:hover::before {
   opacity: 1;
   animation: rotateGradient 8s linear infinite;
 }
 
-/* Button hover: text color + pulse glow */
 .cta-button:hover {
   color: white;
   box-shadow:
@@ -138,13 +129,11 @@ header a:hover {
   animation: buttonPulse 2s ease-in-out infinite;
 }
 
-/* Rotate the gradient */
 @keyframes rotateGradient {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
 
-/* Button pulse glow */
 @keyframes buttonPulse {
   0%, 100% {
     transform: scale(1);
@@ -162,11 +151,6 @@ header a:hover {
   }
 }
 
-
-
-
-
-
 /* Sections */
 section {
   padding: 3rem 2rem;
@@ -176,20 +160,18 @@ section {
 }
 
 .section-content {
-  max-width: 900px;      /* limit text width like before */
-  margin: 0 auto;         /* center the block horizontally */
-  text-align: left;       /* headings and paragraphs align left */
-  padding: 0 1rem;        /* optional padding for small screens */
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 0 1rem;
 }
-
 
 h2 {
   margin-bottom: 1rem;
   color: #111;
 }
 
-
-/*Services formatting*/
+/* Services formatting */
 .service-list {
   list-style: none;
   padding-left: 0;
@@ -200,10 +182,9 @@ h2 {
   margin: 0.75rem 0;
   position: relative;
   cursor: pointer;
-  padding-left: 2rem; /* space for the ✦ */
+  padding-left: 2rem;
 }
 
-/* Rainbow ✦ (main character) */
 .service-list li::before {
   content: "✦";
   position: absolute;
@@ -235,7 +216,6 @@ h2 {
   color: transparent;
 }
 
-/* Rainbow glow layer */
 .service-list li:hover::after {
   content: "✦";
   position: absolute;
@@ -259,37 +239,21 @@ h2 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-
-  /* rainbow glow effect */
   text-shadow:
     0 0 6px rgba(255, 0, 150, 0.6),
     0 0 12px rgba(0, 200, 255, 0.5),
     0 0 20px rgba(255, 255, 0, 0.4);
 }
 
-/* Rainbow scroll */
 @keyframes rainbow {
   0% { background-position: 0% 50%; }
   100% { background-position: 100% 50%; }
 }
 
-/* Glow pulse */
 @keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-    opacity: 0.8;
-  }
-  50% {
-    transform: scale(1.3);
-    opacity: 1;
-  }
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.3); opacity: 1; }
 }
-
-
-
-
-
-
 
 /* Footer */
 footer {
@@ -298,17 +262,114 @@ footer {
   padding: 1rem 2rem;
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* aligns content to the left */
-  gap: 0.5rem; /* space between icon and text */
+  justify-content: flex-start;
+  gap: 0.5rem;
 }
 
 footer p {
-  margin: 0; /* remove default margin */
+  margin: 0;
   width: 100%;
   text-align: center;
 }
 
 .footer-icon {
-  width: 20px;       /* size of the logo */
+  width: 20px;
   height: auto;
+}
+
+/* ======================================
+   Contact Page Styles
+   ====================================== */
+.contact-page {
+  display: flex;
+  min-height: 80vh;
+}
+
+/* Left Side */
+.contact-left {
+  flex: 1;
+  background: #f0f4f8;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.contact-left h2 {
+  font-size: 3rem;
+}
+
+.contact-left p {
+  font-size: 1.25rem;
+  max-width: 400px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icons img {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+
+/* Right Side */
+.contact-right {
+  flex: 1;
+  background: #fff;
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-right form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-right label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.contact-right input,
+.contact-right textarea {
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.contact-right textarea {
+  resize: vertical;
+}
+
+.contact-right button.cta-button {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+/* Responsive: stack columns on mobile */
+@media (max-width: 768px) {
+  .contact-page {
+    flex-direction: column;
+  }
+
+  .contact-left,
+  .contact-right {
+    padding: 2rem 1rem;
+  }
 }
