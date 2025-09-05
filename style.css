@@ -40,7 +40,7 @@ header a:hover {
   text-decoration: underline;
 }
 
-/* Hero section */
+/* Hero section
 #hero {
   background: url("assets/EDIT_Team.jpg") center/cover no-repeat;
   width: 100%;
@@ -49,6 +49,27 @@ header a:hover {
   text-align: center;
   padding: 6rem 2rem;
 }
+ */
+
+#hero {
+  background-image: url("assets/EDIT_Team.jpg");
+  background-size: cover;       /* Scale the image to cover the whole area */
+  background-position: center;  /* Keep it centered */
+  background-repeat: no-repeat; /* Prevent tiling */
+
+  width: 100%;
+  height: 100vh;                /* Make it full screen height */
+  color: white;
+  text-align: center;
+
+  display: flex;                /* Center content inside */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+
 
 .cta-button {
   margin-top: 1rem;
