@@ -116,11 +116,10 @@ header a:hover {
     #5fdfa0 90%,  /* mint green */
     #ff5a7a 100%  /* loop back to pink */
   );
-  border-radius: 50%;
   z-index: -1;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.5s ease;
   opacity: 0;
-  filter: blur(40px); /* soft glow */
+  filter: blur(30px); /* soft glow */
 }
 
 /* Hover: show and rotate gradient */
