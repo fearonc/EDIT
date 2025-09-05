@@ -76,7 +76,7 @@ header a:hover {
 
 #hero p {
   font-size: 1.25rem; /* slightly larger body text */
-  font-colour: #000000;
+  color: black;
   max-width: 700px;
 }
 
