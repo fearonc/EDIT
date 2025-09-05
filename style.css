@@ -32,7 +32,7 @@ header ul {
 }
 
 header img {
-  max-height: 50px;
+  height: 40px;  /* adjust to match nav text size */
   width: auto;
 }
 
