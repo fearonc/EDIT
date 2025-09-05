@@ -9,7 +9,18 @@ body {
   font-family: system-ui, sans-serif;
   line-height: 1.6;
   color: #222;
-  background: #f8f9fa;
+
+  /* Animated gradient background */
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+  background-size: 400% 400%;
+  animation: gradientBG 20s ease infinite;
+}
+
+/* Keyframes for animated gradient */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* Navigation */
@@ -40,46 +51,51 @@ header a:hover {
   text-decoration: underline;
 }
 
-/* Hero section
-#hero {
-  background: url("assets/EDIT_Team.jpg") center/cover no-repeat;
-  width: 100%;
-  height: auto;
-  color: white;
-  text-align: center;
-  padding: 6rem 2rem;
-}
- */
-
+/* Hero section */
 #hero {
   max-width: 100%;
   margin: 0;
   background-image: url("assets/EDIT_Team.jpg");
-  background-size: cover;       /* Scale the image to cover the whole area */
-  background-position: center;  /* Keep it centered */
-  background-repeat: no-repeat; /* Prevent tiling */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   width: 100%;
-  height: 100vh;                /* Make it full screen height */
+  height: 100vh; /* Full screen height */
   color: white;
   text-align: center;
-  display: flex;                /* Center content inside */
+  display: flex;
   flex-direction: column;
-   justify-content: flex-start; /* instead of center */
+  justify-content: flex-start; /* Move content toward top */
   align-items: center;
-  padding: 1rem 2rem;          /* extra top padding pushes it down a bit */
+  padding: 1rem 2rem; /* Space from top */
+  position: relative; /* For angled divider */
 }
 
+/* Angled divider below hero */
+#hero::after {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: rgba(255,255,255,0.9);
+  clip-path: polygon(0 100%, 100% 0, 100% 100%);
+}
+
+/* Hero text */
 #hero h2 {
-  font-size: 3rem;  /* make heading big */
+  font-size: 3rem;
   margin-bottom: 1rem;
 }
 
 #hero p {
-  font-size: 1.25rem; /* slightly larger body text */
-  color: black;
+  font-size: 1.25rem;
   max-width: 700px;
+  color: black;
 }
 
+/* Hero CTA button */
 .cta-button {
   margin-top: 1rem;
   padding: 0.75rem 1.5rem;
@@ -96,11 +112,14 @@ header a:hover {
   background: #81c1dd;
 }
 
-/* Sections */
+/* Sections with semi-transparent backgrounds */
 section {
   padding: 4rem 2rem;
   max-width: 900px;
   margin: auto;
+  background: rgba(255,255,255,0.9); /* Light translucent background */
+  border-radius: 8px; /* Optional: soft edges for a creative feel */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Subtle depth */
 }
 
 h2 {
