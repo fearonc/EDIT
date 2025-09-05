@@ -304,6 +304,8 @@ footer {
 
 footer p {
   margin: 0; /* remove default margin */
+  width: 100%;
+  text-align: center;
 }
 
 .footer-icon {
