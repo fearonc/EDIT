@@ -83,6 +83,43 @@ header a:hover {
   clip-path: polygon(0 100%, 100% 0, 100% 100%);
 }
 
+/* Divider between sections */
+.divider {
+  position: relative;
+  background: rgba(255,255,255,0.9);
+  border-radius: 8px;
+  padding: 4rem 2rem;
+  margin: 0 auto;
+  max-width: 900px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Add angled top divider */
+.divider::before {
+  content: "";
+  position: absolute;
+  top: -50px;      /* height of the angled divider */
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: inherit;  /* match section background */
+  clip-path: polygon(0 0, 100% 100%, 100% 0, 0 100%);
+}
+
+/* Optional: angled bottom divider */
+.divider::after {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: inherit;
+  clip-path: polygon(0 100%, 100% 0, 100% 100%, 0 0);
+}
+
+
+
 /* Hero text */
 #hero h2 {
   font-size: 3rem;
