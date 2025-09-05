@@ -43,6 +43,8 @@ header a:hover {
 /* Hero section */
 #hero {
   background: url("assets/EDIT_Team.jpg") center/cover no-repeat;
+  width: 100%;
+  height: auto;
   color: white;
   text-align: center;
   padding: 6rem 2rem;
