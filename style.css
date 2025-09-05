@@ -5,12 +5,25 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+   height: 100%;
   font-family: 'Mark Pro', system-ui, sans-serif;
   line-height: 1.6;
   color: #222;
   background: #f8f9fa;
 }
+
+main {
+  flex: 1; /* takes up all remaining space, pushes footer to bottom */
+}
+
 
 /* Navigation */
 header {
