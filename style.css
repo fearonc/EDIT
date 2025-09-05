@@ -295,6 +295,18 @@ h2 {
 footer {
   background: #111;
   color: #fff;
-  text-align: center;
-  padding: 1rem;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* aligns content to the left */
+  gap: 0.5rem; /* space between icon and text */
+}
+
+footer p {
+  margin: 0; /* remove default margin */
+}
+
+.footer-icon {
+  width: 20px;       /* size of the logo */
+  height: auto;
 }
