@@ -166,17 +166,33 @@ h2 {
     red
   );
   background-size: 400% 100%;
-  animation: rainbow 3s linear infinite;
+  animation: rainbow 3s linear infinite, pulse 2s ease-in-out infinite;
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text; /* for Firefox */
+  background-clip: text; /* Firefox */
   color: transparent;    /* ensure text takes gradient */
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6); /* soft glow */
 }
 
+/* Rainbow animation for scrolling colours */
 @keyframes rainbow {
   0% { background-position: 0% 50%; }
   100% { background-position: 100% 50%; }
+}
+
+/* Pulse animation for glow effect */
+@keyframes pulse {
+  0%, 100% {
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.5),
+                 0 0 12px rgba(255, 255, 255, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.8),
+                 0 0 24px rgba(255, 255, 255, 0.6);
+    transform: scale(1.15); /* subtle grow */
+  }
 }
 
 
