@@ -90,12 +90,15 @@ section {
   padding: 3rem 2rem;
   max-width: 100%;
   margin: auto;
-  text-align: center;
 }
 
-section p {
-  left: 33%;
+.section-content {
+  max-width: 900px;      /* limit text width like before */
+  margin: 0 auto;         /* center the block horizontally */
+  text-align: left;       /* headings and paragraphs align left */
+  padding: 0 1rem;        /* optional padding for small screens */
 }
+
 
 h2 {
   margin-bottom: 1rem;
