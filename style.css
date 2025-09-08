@@ -413,16 +413,21 @@ footer p {
   text-align: center;
 }
 
-
 .team-text h2 {
   margin-bottom: 1rem;
-  color: #000000; /* matches your global heading color */
 }
 
 .team-text h2 a {
+  display: block;        /* makes the link fill the h2 area */
   text-decoration: none;
-  color: inherit;
+  color: #000000;
 }
+
+.team-text h2 a:hover {
+  text-decoration: underline;
+  color: #49cdf9;
+}
+
 
 .team-image img {
   width: 100%;
