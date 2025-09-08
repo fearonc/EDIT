@@ -399,19 +399,14 @@ footer p {
 }
 
 .team-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem;
+  width: 100%; /* span full width */
+  max-width: none; /* remove width restriction */
+  padding: 0; /* optional: remove side padding */
 }
 
 .team-row {
-  display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: center;
+  gap: 0; /* remove the central border effect */
 }
 
 .team-row.reverse {
