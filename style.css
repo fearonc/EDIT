@@ -386,3 +386,54 @@ footer p {
     padding: 2rem 1rem;
   }
 }
+
+
+/* ======================================
+   About Page Styles
+   ====================================== */
+
+.page-title {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 2.5rem;
+}
+
+.team-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.team-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.team-row.reverse {
+  grid-template-columns: 1fr 1fr;
+  direction: rtl;
+}
+
+.team-row.reverse > * {
+  direction: ltr;
+}
+
+.team-text h2 {
+  margin-bottom: 1rem;
+}
+
+.team-text h2 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.team-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
