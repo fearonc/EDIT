@@ -463,9 +463,10 @@ footer p {
 
 .person {
   position: absolute;
-  width: 8%;            /* size of hoverable area, relative to wrapper */
+  width: 6%;            /* size of hoverable area, relative to wrapper */
   height: 15%;
   cursor: pointer;
- debugging: show target areas
+ /*debugging: show target areas */
   /* background: rgba(255, 0, 0, 0.3); */
 }
+
