@@ -448,11 +448,24 @@ footer p {
   }
 }
 
+.team-image-wrapper {
+  position: relative;   /* key: makes overlay children position relative to this box */
+  display: inline-block;
+  width: 100%;          /* responsive */
+  max-width: 800px;     /* optional: keep group photos from getting too huge */
+}
+
+.team-image-wrapper img {
+  display: block;
+  width: 100%;          /* responsive image */
+  height: auto;
+}
+
 .person {
   position: absolute;
-  width: 5%;   /* adjust size for hover area */
-  height: 10%;
+  width: 8%;            /* size of hoverable area, relative to wrapper */
+  height: 15%;
   cursor: pointer;
-  /* optional: visual debugging */
-  /* background: rgba(255,0,0,0.2); */
+ debugging: show target areas
+  /* background: rgba(255, 0, 0, 0.3); */
 }
