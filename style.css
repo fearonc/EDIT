@@ -399,7 +399,7 @@ footer p {
 }
 
 .team-grid {
-  width: 100%; /* span full width */
+  width: 50%; /* span full width */
   max-width: none; /* remove width restriction */
   padding: 0; /* optional: remove side padding */
 }
