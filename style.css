@@ -418,16 +418,16 @@ footer p {
 }
 
 .team-text h2 a {
-  display: block;        /* makes the link fill the h2 area */
+  display: block;
   text-decoration: none;
   color: #000000;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 .team-text h2 a:hover {
   text-decoration: underline;
   color: #49cdf9;
 }
-
 
 .team-image img {
   width: 100%;
