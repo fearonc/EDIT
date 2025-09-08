@@ -400,9 +400,9 @@ footer p {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  max-width: 1200px;
   margin: 0 auto;
   padding: 1rem;
+  intem-align: center;
 }
 
 .team-row {
@@ -410,20 +410,13 @@ footer p {
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   align-items: center;
+  text-align: center;
 }
 
-.team-row.reverse {
-  grid-template-columns: 1fr 1fr;
-  direction: rtl;
-}
-
-.team-row.reverse > * {
-  direction: ltr;
-}
 
 .team-text h2 {
   margin-bottom: 1rem;
-  color: #111; /* matches your global heading color */
+  color: #000000; /* matches your global heading color */
 }
 
 .team-text h2 a {
