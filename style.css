@@ -447,3 +447,12 @@ footer p {
     order: -1; /* ensures text stays above image when stacked */
   }
 }
+
+.person {
+  position: absolute;
+  width: 5%;   /* adjust size for hover area */
+  height: 10%;
+  cursor: pointer;
+  /* optional: visual debugging */
+  /* background: rgba(255,0,0,0.2); */
+}
