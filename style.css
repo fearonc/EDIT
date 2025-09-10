@@ -508,6 +508,9 @@ footer p {
   text-align: center;
   color: white;
   position: relative;
+  background-size: cover;
+  background-position: top center;   /* keep the top visible */
+}
 }
 
 .team-hero-text {
