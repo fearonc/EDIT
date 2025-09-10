@@ -511,7 +511,7 @@ footer p {
   background-size: cover;
   background-position: top center;   /* keep the top visible */
 }
-}
+
 
 .team-hero-text {
   background: rgba(0, 0, 0, 0.4); /* semi-transparent overlay for readability */
