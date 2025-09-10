@@ -470,3 +470,30 @@ footer p {
   /* background: rgba(255, 0, 0, 0.3); */
 }
 
+
+
+
+
+/* Custom tooltip */
+.person::after {
+  content: attr(data-name);
+  position: absolute;
+  bottom: 100%;       /* position above the box */
+  left: 50%;
+  transform: translateX(-50%);
+  background: #111;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;  /* fade-in */
+}
+
+/* Show tooltip instantly on hover */
+.person:hover::after {
+  opacity: 1;
+}
+
