@@ -534,13 +534,16 @@ footer p {
 /* Individual team hero backgrounds */
 .catalogue-hero {
   background: url("assets/Catalogue.jpg") center/cover no-repeat;
+   background-position: center 30%;  /* tweak this value to move focus */
 }
 
 .supplier-content-hero {
   background: url("assets/Supplier.jpg") center/cover no-repeat;
+   background-position: center 30%;  /* tweak this value to move focus */
 }
 
 .editorial-hero {
   background: url("assets/Editorial.jpg") center/cover no-repeat;
+   background-position: center 30%;  /* tweak this value to move focus */
 }
 
