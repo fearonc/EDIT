@@ -539,7 +539,7 @@ footer p {
 
 .supplier-content-hero {
   background: url("assets/Supplier.jpg") center/cover no-repeat;
-   background-position: center 30%;  /* tweak this value to move focus */
+   background-position: center 20%;  /* tweak this value to move focus */
 }
 
 .editorial-hero {
