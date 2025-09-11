@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/EDIT_Favicon_Small.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>THG ED!T - Catalogue</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header / Nav -->
+  <header>
+    <nav>
+      <a href="index.html">
+        <img src="assets/EDIT%20Logo%20White%20Thin.png" alt="ED!T Logo">
+      </a>
+      <ul>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="teams.html">Teams</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Team Hero / Title -->
+  <main>
+   <section class="team-hero catalogue-hero">
+  <div class="team-hero-text">
+    <h1>Catalogue Team</h1>
+    <p>We manage product Catalogue data across THG.</p>
+  </div>
+</section>
+
+    <!-- Team Description -->
+    <section class="team-description">
+      <h2>About the Team</h2>
+      <p>We manage product data, ensuring accuracy and consistency across all platforms.</p>
+     </section>
+
+    <!-- Team Services -->
+    <section class="team-services">
+      <h2>Services</h2>
+      <ul class="service-list">
+        <li>Service 1 – brief description</li>
+        <li>Service 2 – brief description</li>
+        <li>Service 3 – brief description</li>
+        <!-- Add more services as needed -->
+      </ul>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <img src="assets/Ingenuity_favicon.png" alt="Logo" class="footer-icon">
+    <p>&copy; <span id="year"></span> THG EDIT. All rights reserved.</p>
+  </footer>
+
+  <!-- Script to auto-fill year -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
