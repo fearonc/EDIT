@@ -313,6 +313,8 @@ footer p {
   flex-direction: column;
   justify-content: center;
   gap: 2rem;
+  align-items:center;
+  text-align:center;
 }
 
 .contact-left h2 {
@@ -321,7 +323,6 @@ footer p {
 
 .contact-left p {
   font-size: 1.25rem;
-  max-width: 400px;
 }
 
 .social-icons {
